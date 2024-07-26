@@ -1,14 +1,3 @@
-// SStlr V2 discord (fastest spoofer): https://discord.gg/Wn93B3yyhY
-// Open-sourced as of 10/11/2023 - It was a pleasure to work on this for everyone :)
-
-/*
-
-SPECIAL THANKS:
-
-- <@734235514495828000> (annony12) -> fixed it only spoofing a few animations per try (Removed Break check)
-
-*/
-
 import fetch from 'node-fetch';
 import Express from 'express';
 import bodyParser from 'body-parser';
@@ -64,7 +53,7 @@ const endpoints = {
 
 const remapped = {};
 const failedIDs = [];
-// creator: "suuwu. on discord" (<@675455917013336086>)
+
 
 async function publishAnimations(cookie, csrf, ids, groupId) {
   for (const id of Object.values(ids)) {
@@ -114,7 +103,7 @@ async function publishAnimations(cookie, csrf, ids, groupId) {
 }
 
 async function pullAnimation(id) {
- // made by: "suuwu. (sstlr v2 owner)"
+
     
   return await fetch(endpoints.assetDelivery(id)).then(res => res.blob());
 }
@@ -190,5 +179,5 @@ secApp.post('/', async (req, res) => {
   workingOnSecApp = false;
 });
 
-mainApp.listen(6969, () => console.log(`SStlr V1 - FREE`));
-secApp.listen(6970, () => console.log(`Get SStlr V1(FREE) or V2(PAID) at https://discord.gg/Wn93B3yyhY`));
+mainApp.listen(6969, () => console.log(`Saint - FREE`));
+secApp.listen(6970, () => console.log(`Get Saint V1(FREE) or V2(PAID) at https://discord.gg/Wn93B3yyhY`));
